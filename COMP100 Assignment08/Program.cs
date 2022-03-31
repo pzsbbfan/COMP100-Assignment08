@@ -8,11 +8,11 @@ namespace COMP100_Assignment08
 {
     internal class Program
     {
-        static void Print(char[] charArray)
+        static void Print(int[] intArray)
         {
-            foreach (var cha in charArray)
+            foreach (var num in intArray)
             {
-                Console.Write(cha + " ");
+                Console.Write(num + " ");
             }
         }
         static void Main(string[] args)
@@ -21,12 +21,22 @@ namespace COMP100_Assignment08
             int[] numbers = { 0, 2, 3, 5, 7, 1, 1, 2, 5, 6, 7, 2, 5, 2 };
             string[] poem = "mary had a little lamb its fleece was white as snow".Split();
 
-            Print(letters);
-            Array.Reverse(letters);
+            Print(numbers);
             Console.WriteLine();
-            Print(letters);
+            Console.WriteLine("position of number 3 in numbers: ");
+            Console.WriteLine(Array.BinarySearch(numbers, 3));
+            Console.WriteLine();
+            Console.WriteLine("numbers list after sorted: ");
+            Array.Sort(numbers);
+            Print(numbers);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("After sorting the list, the position of number 3 in numbers:");
+            Console.WriteLine(Array.BinarySearch(numbers, 3));
             Console.ReadLine();
         }
+
+
 
     }
 }
