@@ -8,11 +8,11 @@ namespace COMP100_Assignment08
 {
     internal class Program
     {
-        static void Print(int[] intArray)
+        static void Print(string[] strArray)
         {
-            foreach (var num in intArray)
+            foreach (var str in strArray)
             {
-                Console.Write(num + " ");
+                Console.Write(str + " ");
             }
         }
         static void Main(string[] args)
@@ -21,7 +21,7 @@ namespace COMP100_Assignment08
             int[] numbers = { 0, 2, 3, 5, 7, 1, 1, 2, 5, 6, 7, 2, 5, 2 };
             string[] poem = "mary had a little lamb its fleece was white as snow".Split();
 
-            Print(numbers);
+            Print(poem);
             Console.ReadLine();
         }
     }
