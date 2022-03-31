@@ -8,13 +8,13 @@ namespace COMP100_Assignment08
 {
     internal class Program
     {
-        static int[] func(int number)
+        static Random random = new Random();
+        static int[] func(int length)
         {
-            int[] myArray = new int[number];
+            int[] myArray = new int[length];
             for (int i = 0; i < myArray.Length; i++)
             {
-                Console.WriteLine($"Enter the {i + 1} item in the array");
-                myArray[i] = Convert.ToInt32(Console.ReadLine());
+                myArray[i] = random.Next(100, 200);
             }
             
             return myArray;
